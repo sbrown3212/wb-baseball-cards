@@ -1,3 +1,5 @@
+import playerData from "./playerData";
+
 function BaseballCard(props) {
   return (
     <div className="card">
@@ -6,8 +8,13 @@ function BaseballCard(props) {
   );
 }
 
+const cards = playerData.map((player) => {
+  return BaseballCard(player);
+});
+
 function App() {
-  return <BaseballCard />;
+  console.log(cards)
+  return <>{cards}</>;
 }
 
 export default App;
