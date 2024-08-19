@@ -1,9 +1,10 @@
 import playerData from "./playerData";
 
-function BaseballCard(props) {
+function BaseballCard({name, team, position, stats, imgUrl, cardId}) {
   return (
     <div className="card">
-      <h2>Player Name goes here</h2>
+      <h2>{name}</h2>
+      <img src={imgUrl} alt="" />
     </div>
   );
 }
